@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSW</title>
+    <link rel="icon" href="./HeLoVas_ico.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onresize="mapCenter()">
+    <div class= "iss" id="iss" ></div>
+    <img id= "worldMap" src= "theWorldMap.jpg"  alt='World Map'></img>
+        <div id = "title">
+            <h1 id= "titleLegend">ISS CURRENT LOCATION</h1>
+            <h2 id= "latLegend" style= "font-family: Arial, Helvetica, sans-serif"></h2>
+            <h2 id= "longLegend" style= "font-family: Arial, Helvetica, sans-serif"></h2>
+        </div>
+    <div class="button-container" id="btnContainer">
+        <button id="new-quote">UPDATE</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
