@@ -9,7 +9,8 @@ const newQuoteBtn = document.getElementById('new-quote');
 let loc = {};
 
 async function componentDidMount() {
-  const apiUrl = 'http://api.open-notify.org/iss-now.json';
+/*   const apiUrl = 'http://api.open-notify.org/iss-now.json'; */
+  const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
   try {
     const response = await fetch (apiUrl);
     loc = await response.json();
@@ -20,7 +21,8 @@ async function componentDidMount() {
 }
 
 async function afterClick () {
-  const apiUrl = 'http://api.open-notify.org/iss-now.json';
+/*   const apiUrl = 'http://api.open-notify.org/iss-now.json'; */
+  const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
   try {
     const response = await fetch (apiUrl);
     loc = await response.json();
@@ -39,8 +41,10 @@ function mapCenter () {
   let mapWidth = 0;
 
   /*Variables to calculate the latitude and longitude of the ISS*/
-  let lat = loc.iss_position.latitude;
-  let long = loc.iss_position.longitude;
+/*   let lat = loc.iss_position.latitude;
+  let long = loc.iss_position.longitude; */
+  let lat = loc.latitude.toPrecision(5);
+  let long = loc.longitude.toPrecision(5);
 
   /* Variables for the map position on the page*/
   let topOffset = 0;
